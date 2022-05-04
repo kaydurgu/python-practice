@@ -30,3 +30,4 @@ assertIsInstance(x, y)	    isinstance(x, y)
 
 assertNotIsInstance(x,y)	не isinstance(x, y)
 '''
+#
