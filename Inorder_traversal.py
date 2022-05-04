@@ -21,7 +21,11 @@ class Tree:
             self.inorder(root.left)
             self.display(root)
             self.inorder(root.right )
-
+    #Preorder
+    #Root, Left, Right 
+    
+    #Postorder
+    #Left, Right, Root
 
 tree = Tree()
 root = Node(5)
