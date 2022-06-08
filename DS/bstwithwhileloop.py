@@ -47,4 +47,5 @@ tree.insert(721)
 tree.insert(81)
 tree.insert(9)
 
+
 tree.inorder(tree.root)
