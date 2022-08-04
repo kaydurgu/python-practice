@@ -11,7 +11,7 @@ class Vector:
     def __do(self, other, f_name, new_object=True):
         if isinstance(other, self.__class__) and len(other) == len(self):
             new_coords = (f_name(a, b) for a, b in zip(self.coords, other.coords))          
-        elif isinstance(other, (int, float)):
+        elif isinstance(other, (float, int)):
             new_coords = (f_name(b, other) for b in self.coords)
         else:
             raise ArithmeticError('размерности векторов не совпадают')
