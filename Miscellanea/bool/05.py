@@ -43,3 +43,5 @@ class Vector:
         if isinstance(other, self.__class__):
             return self.coords == other.coords
         raise TypeError('Сравнение векторов не возможно!')
+    def __abs__(self):
+        return 0
