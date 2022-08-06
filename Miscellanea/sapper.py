@@ -7,11 +7,14 @@ class Cell:
         self.fl_open = False
 
 class GamePole:
+    __isinstance = None
+    
     def __init__(self, N, M) -> None:
 
         self.N = N
         self.M = M
-        self.pole = [] 
+        self.pole = []
+
     def init(self):  
         self.pole = [[Cell(0, False) for i in range(self.N)] for i in range(self.N)]  
         empty_fields = []

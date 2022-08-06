@@ -42,11 +42,18 @@ class LinkedList:
             self.tail = obj
         self.elements+=1
 
+    def show(self):
+
+        head = self.head
+        while head:
+            print (head.data, end=' ')
+            head = head.next
+        print ()
+
     def remove_obj(self,indx):
         if self.elements == 1:
             self.head = None
             self.tail = None
-            self.elements-=1
         elif indx == 0:
             self.head = self.head.next
             self.elements -= 1
