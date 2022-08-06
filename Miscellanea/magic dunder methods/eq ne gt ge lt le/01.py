@@ -1,5 +1,3 @@
-
-
 class InRange:
     def __init__(self, mn , mx) -> None:
         self.mn = mn 
