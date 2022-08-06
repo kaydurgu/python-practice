@@ -31,7 +31,4 @@ class MailBox:
 
 mail = MailBox()
 mail.receive()
-for i in mail.inbox_list[::len(mail.inbox_list) - 1]:
-    i.set_read(True)
-    
 inbox_list_filtered = list(filter(bool, mail.inbox_list))

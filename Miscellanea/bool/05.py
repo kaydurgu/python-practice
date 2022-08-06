@@ -1,5 +1,5 @@
 import operator as op
-#using operator
+
 
 class Vector:
     def __init__(self, *args):
@@ -7,7 +7,6 @@ class Vector:
 
     def __len__(self):
         return len(self.coords)
-    #something new here
     def __do(self, other, f_name, new_object=True):
         if isinstance(other, self.__class__) and len(other) == len(self):
             new_coords = (f_name(a, b) for a, b in zip(self.coords, other.coords))          
@@ -43,5 +42,3 @@ class Vector:
         if isinstance(other, self.__class__):
             return self.coords == other.coords
         raise TypeError('Сравнение векторов не возможно!')
-    def __abs__(self):
-        return 0
