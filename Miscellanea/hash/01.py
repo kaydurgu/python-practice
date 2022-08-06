@@ -1,23 +1,18 @@
 # hashable - только неизменяемые типы данных
-'''
-p1 = Point(1, 2)
-p2 = Point(1, 2)
+#Rect(x, y, width, height)
 
-То есть, с точки зрения функции hash() – это два разных объекта. Но как она понимает, равные объекты или разные? Все просто. Если оператор сравнения:
+class Rect:
+    def __init__(self, x, y, width, height) -> None:
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+    def __hash__(self):
+        return self.width*self.height
 
-print (p1 == p2)
-'''
-class PathLine:
-    def __init__(self, dist, angle):
-        self.dist = dist
-        self.angle = angle
+r1 = Rect(10, 5, 100, 50)
+r2 = Rect(-10, 4, 100, 50)
 
-    def __eq__(self, other):
-        return abs(self.dist) == abs(other.dist)
-    def __hash__(self) -> int:
-        return hash(self.dist)
-p1 = PathLine(10, 1.57)
-p2 = PathLine(-10, 0.49)
-h1, h2 = hash(p1), hash(p2)
+h1, h2 = hash(r1), hash(r2)   # h1 == h2
 
-print (h1)
+print (h1, h2)
